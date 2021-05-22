@@ -1,0 +1,26 @@
+<nav class="navbar navbar-inverse">
+	<ul class="nav navbar-nav navbar-left">
+		<li><a href="Personal?action=Home"><img src="sources/images/logo.JPG"></a></li>
+		<li><a href="Personal?action=Blogs">Tulisanku</a></li>
+		<li><a href="Controller?action=friendship">Teman</a><span id="frdNumber"></span></li>
+		<li><a href="Personal?action=Notifications">Pemberitahuan<span id="notif"></span></a></li>
+		<li><a href="Personal?action=Messages">Pesan<span id="msgNumber"></span>
+		</a></li>
+		<li><a href="Personal?action=BandungWiki">Bandung Wiki<span id="msgNumber"></span>
+		</a></li>
+		<li><a href="Controller?action=logout">Keluar</a></li>
+	</ul>
+	<form class="navbar-form navbar-right"
+		action="Personal?action=search" method="post">
+		<div class="form-group">
+			<div class="input-group">
+				<input class="form-control" id="navbarInput-01" type="text" name="keys"
+					placeholder="Cari Komunitas atau Warga"> <span class="input-group-btn">
+					<button type="submit" class="btn">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</form>
+</nav>

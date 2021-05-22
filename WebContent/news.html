@@ -1,0 +1,22 @@
+
+<script type="text/javascript" src="sources/fancybox/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="sources/fancybox/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="sources/fancybox/jquery.fancybox.css"
+	type="text/css" media="screen" />
+<script type="text/javascript">
+$("a[rel=news]").fancybox();
+</script>
+<ul id="news">
+	<c:forEach var="news" items="${newsList}">
+		<li id="bID=${news.getId()}"><a
+			href="Personal?action=vDetailWiki&wID=${news.getId()}">
+				${news.getTitle() } </a>
+			<div class="imgDiv">
+				<a rel="news" href="${news.singleFile.getLocation()}" title="">
+					<img class="newsImg" alt="${news.singleFile.getFileName()}"
+					src="${news.singleFile.getLocation()}">
+				</a>
+			</div></li>
+
+	</c:forEach>
+</ul>

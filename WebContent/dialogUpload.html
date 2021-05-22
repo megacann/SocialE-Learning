@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="sources/css/jquery-ui.css">
+<script src="sources/js/jquery-ui.js"></script>
+<script>
+function upload(){
+    $( "#dialog-upload" ).dialog({
+      resizable: false,
+      modal: true,
+      buttons: {
+        "Batal": function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+}
+	jQuery.browser = {};
+	$(document)
+			.ready(
+					function() {
+						$("#submitImg").hide();
+						$("#btnFileDlg").click(function(){
+							$("#submitImg").show();		  
+						});
+						$("#multiform")
+								.submit(
+										function(e) {
+											$("#multi-msg")
+													.html(
+															"<img src='sources/images/loading.gif'/>");
+
+											var formObj = $(this);
+											var formURL = formObj
+													.attr("action");
+
+											if (window.FormData !== undefined) // for HTML5 browsers
+											//			if(false) 
+
+											{
+												//alert ("1");
+												var formData = new FormData(
+														this);
+												$
+														.ajax({
+															url : formURL,
+															type : 'POST',
+															data : formData,
+															mimeType : "multipart/form-data",
+															contentType : false,
+															cache : false,
+															processData : false,
+															success : function(
+																	data,
+																	textStatus,
+																	jqXHR) {
+																//alert(data);
+																if (data != "0") {
+																	$( "#dialog-upload" ).dialog( "close" );
+																	var h = $("#hImg").val();
+														        	  var w = $("#wImg").val();
+														        	  var $body = $(tinymce.activeEditor.getBody());
+														              $body.find('p:last').append('<img src="'+data+'" height = "'+h+'" width = "'+w+'">');
+														              $("#multi-msg")
+																		.html(
+																				"");
+														              $("#btnFileDlg").val("");
+																} else {
+																	$("#multi-msg")
+																	.html(
+																			'Gagal. <input type="hidden" class="copyNama" value="'+data+'">');
+																}
+																
+															},
+															error : function(
+																	jqXHR,
+																	textStatus,
+																	errorThrown) {
+																$("#multi-msg")
+																		.html(
+																				'Gagal. <input type="hidden" class="copyNama" value="0">');
+															}
+														});
+												e.preventDefault();
+												e.unbind();
+											} else //for olden browsers
+											{
+												//generate a random id
+												var iframeId = 'unique'
+														+ (new Date().getTime());
+
+												//create an empty iframe
+												var iframe = $('<iframe src="javascript:false;" name="'+iframeId+'" />');
+
+												//hide it
+												iframe.hide();
+
+												//set form target to iframe
+												formObj
+														.attr('target',
+																iframeId);
+
+												//Add iframe to body
+												iframe.appendTo('body');
+												iframe
+														.load(function(e) {
+															var doc = getDoc(iframe[0]);
+															var docRoot = doc.body ? doc.body
+																	: doc.documentElement;
+															var data = docRoot.innerHTML;
+															$("#multi-msg")
+																	.html(
+																			'Gagal. <input type="hidden" class="copyNama" value="0">');
+														});
+
+											}
+
+										});
+
+						$("#multi-post").click(function() {
+
+							$("#multiform").submit();
+
+						});
+
+					});
+	
+</script>
+<div id="dialog-upload" title="Unggah Gambar">
+	<h2>
+		<span class="glyphicon glyphicon-upload"
+			style="float: left; margin: 0 7px 20px 0;"></span>Form Unggah Gambar
+	</h2>
+	<form method="post" enctype="multipart/form-data" id="multiform"
+		name="multiform" action="Personal?action=uploadImages">
+		<input type="number" id="hImg" class="input-sm w20"
+			placeholder="tinggi"> x <input type="number" id="wImg"
+			class="input-sm w20" placeholder="lebar"> <input type="file"
+			name="file" id="btnFileDlg" value="" /> <input type="submit"
+			value="Unggah" class="btn btn-info btn-sm formSubmit" id="submitImg">
+		<div id="multi-msg"></div>
+	</form>
+</div>

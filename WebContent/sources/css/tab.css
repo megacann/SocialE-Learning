@@ -1,0 +1,342 @@
+pre {
+	clear: none;
+}
+div.showCode {
+	margin-left: 8em;
+}
+.tabs {
+	margin-top: 0.5em;
+}
+.ui-tabs { 
+    padding: 0.2em; 
+    background: #F5F3E5; 
+    border-width: 1px; 
+} 
+.ui-tabs .ui-tabs-nav { 
+    padding-left: 0.2em; 
+    background: #ECE8DA; 
+    border: 1px solid #D4CCB0;
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
+    border-radius: 6px; 
+} 
+.ui-tabs-nav .ui-state-active {
+	border-color: #D4CCB0;
+}
+.ui-tabs .ui-tabs-panel { 
+    background: transparent; 
+    border-width: 0px; 
+}
+.ui-tabs-panel p {
+	margin-top: 0em;
+}
+
+#tabs-nobg {
+	padding: 0px;
+}
+#tabs-nobg .ui-tabs-nav {
+	background: transparent;
+	border-width: 0px 0px 1px 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+#tabs-nobg .ui-tabs-panel {
+	margin: 0em 0.2em 0.2em 0.2em;
+}
+
+#tabs-nohdr {
+	padding: 0px;
+	background: none;
+	border-width: 0px;
+}
+#tabs-nohdr .ui-tabs-nav {
+	padding-left: 0px;
+	background: transparent;
+	border-width: 0px 0px 1px 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+#tabs-nohdr .ui-tabs-panel {
+	background: #f5f3e5;
+	border-width: 0px 1px 1px 1px;
+}
+
+#tabs-min {
+	background: #fff;
+	border: none;
+}
+#tabs-min .ui-widget-header {
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid #236B8E;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	font-weight: bold;
+}
+#tabs-min .ui-tabs-nav .ui-state-default {
+	background: transparent;
+	border: none;
+}
+#tabs-min .ui-tabs-nav .ui-state-active {
+	border: none;
+}
+#tabs-min .ui-tabs-nav .ui-state-default a {
+	color: #c0c0c0;
+}
+#tabs-min .ui-tabs-nav .ui-state-active a {
+	color: #236B8E;
+}
+
+#tabs-smaller .ui-tabs-nav li {
+	margin-top: 0.6em;
+	font-size: 80%;
+}
+#tabs-smaller .ui-tabs-nav li.ui-tabs-selected,
+#tabs-smaller .ui-tabs-nav li.ui-state-active {
+	margin-top: 0em;
+	font-size: 100%;
+}
+
+#tabs-icons .ui-tabs-nav .ui-icon {
+	display: inline-block;
+}
+
+#tabs-buttons .ui-tabs-nav {
+	padding: 0em;
+	background: transparent;
+	border-width: 0px;
+}
+#tabs-buttons .ui-tabs-nav li {
+	position: static;
+	margin: 0px;
+	border-bottom: 1px solid #327e04 !important;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+#tabs-buttons .ui-tabs-nav li:first-child {
+	-moz-border-radius: 6px 0px 0px 6px;
+	-webkit-border-radius: 6px 0px 0px 6px;
+	border-radius: 6px 0px 0px 6px;
+}
+#tabs-buttons .ui-tabs-nav li:last-child {
+	-moz-border-radius: 0px 6px 6px 0px;
+	-webkit-border-radius: 0px 6px 6px 0px;
+	border-radius: 0px 6px 6px 0px;
+}
+#tabs-buttons .ui-tabs-nav li.ui-tabs-selected {
+	padding-bottom: 0px;
+	border-bottom: 1px solid #d4ccb0 !important;
+}
+
+#tabs-centre .ui-tabs-nav {
+	height: 2.35em;
+	text-align: center;
+}
+#tabs-centre .ui-tabs-nav li {
+	display: inline-block;
+	float: none;
+	top: 0px;
+	margin: 0em;
+}
+
+#tabs-to-right .ui-tabs-nav {
+	float: right;
+	border-left: none;
+	-moz-border-radius: 0px 6px 6px 0px;
+	-webkit-border-radius: 0px 6px 6px 0px;
+	border-radius: 0px 6px 6px 0px;
+}
+#tabs-to-right .tabs-background {
+	height: 2.6em;
+	background: #ece8da;
+	border: 1px solid #d4ccb0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#tabs-bottom {
+	position: relative;
+	padding-bottom: 3em;
+}
+#tabs-bottom .ui-tabs-nav {
+	position: absolute;
+	left: 0.25em;
+	right: 0.25em;
+	bottom: 0.25em;
+	padding: 0em 0.2em 0.2em;
+}
+#tabs-bottom .ui-tabs-nav li {
+	top: -1px;
+	border-top: none;
+	border-bottom: 1px solid #ccc;
+	-moz-border-radius: 0px 0px 4px 4px;
+	-webkit-border-radius: 0px 0px 4px 4px;
+	border-radius: 0px 0px 4px 4px;
+}
+#tabs-bottom .ui-tabs-nav li.ui-tabs-selected,
+#tabs-bottom .ui-tabs-nav li.ui-state-active {
+	top: -2px;
+}
+
+#tabs-left {
+	position: relative;
+	padding-left: 6.5em;
+}
+#tabs-left .ui-tabs-nav {
+	position: absolute;
+	left: 0.25em;
+	top: 0.25em;
+	bottom: 0.25em;
+	width: 6em;
+	padding: 0.2em 0 0.2em 0.2em;
+}
+#tabs-left .ui-tabs-nav li {
+	right: 1px;
+	width: 100%;
+	border-right: none;
+	border-bottom-width: 1px !important;
+	-moz-border-radius: 4px 0px 0px 4px;
+	-webkit-border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 0px 0px 4px;
+	overflow: hidden;
+}
+#tabs-left .ui-tabs-nav li.ui-tabs-selected,
+#tabs-left .ui-tabs-nav li.ui-state-active {
+	border-right: 1px solid transparent;
+}
+#tabs-left .ui-tabs-nav li a {
+	float: right;
+	width: 100%;
+	text-align: right;
+}
+#tabs-left > div {
+	height: 35em;
+}
+
+#tabs-right {
+	position: relative;
+	padding-right: 6.5em;
+}
+#tabs-right .ui-tabs-nav {
+	position: absolute;
+	right: 0.25em;
+	top: 0.25em;
+	bottom: 0.25em;
+	width: 6em;
+	padding: 0.2em 0.2em 0.2em 0em;
+}
+#tabs-right .ui-tabs-nav li {
+	width: 100%;
+	border-left: none;
+	border-bottom-width: 1px !important;
+	-moz-border-radius: 0px 4px 4px 0px;
+	-webkit-border-radius: 0px 4px 4px 0px;
+	border-radius: 0px 4px 4px 0px;
+	overflow: hidden;
+}
+#tabs-right .ui-tabs-nav li.ui-tabs-selected,
+#tabs-right .ui-tabs-nav li.ui-state-active {
+	left: -1px;
+	border-left: 1px solid transparent;
+}
+#tabs-right .ui-tabs-nav li a {
+	width: 100%;
+}
+#tabs-right > div {
+	height: 33em;
+}
+
+#tabs-nested > .ui-tabs-panel {
+	padding: 0em;
+}
+#tabs-nested-left {
+	position: relative;
+	padding-left: 6.5em;
+}
+#tabs-nested-left .ui-tabs-nav {
+	position: absolute;
+	left: 0.25em;
+	top: 0.25em;
+	bottom: 0.25em;
+	width: 6em;
+	padding: 0.2em 0 0.2em 0.2em;
+}
+#tabs-nested-left .ui-tabs-nav li {
+	right: 1px;
+	width: 100%;
+	border-right: none;
+	border-bottom-width: 1px !important;
+	-moz-border-radius: 4px 0px 0px 4px;
+	-webkit-border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 0px 0px 4px;
+	overflow: hidden;
+}
+#tabs-nested-left .ui-tabs-nav li.ui-tabs-selected,
+#tabs-nested-left .ui-tabs-nav li.ui-state-active {
+	border-right: 1px solid transparent;
+}
+#tabs-nested-left .ui-tabs-nav li a {
+	float: right;
+	width: 100%;
+	text-align: right;
+}
+#tabs-nested-left > div {
+	height: 10em;
+	overflow: auto;
+}
+
+#tabs-one-line .scroller {
+	overflow: auto;
+}
+#tabs-one-line ul {
+	width: 1660px;
+}
+
+/*!
+ * jQuery UI CSS Framework 1.8.23
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+/*!
+ * jQuery UI Tabs 1.8.23
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 30px 1px 0px; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em .4em; text-decoration: none; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; background: none; }
+.ui-tabs .ui-tabs-hide { display: none !important; }
