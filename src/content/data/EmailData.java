@@ -4,7 +4,7 @@ import iweb2.ch2.webcrawler.model.ProcessedDocument;
 import iweb2.ch2.webcrawler.parser.html.HTMLDocumentParser;
 import iweb2.ch5.usecase.email.EmailClassifier;
 import iweb2.ch5.usecase.email.data.Email;
-import iweb2.ch5.usecase.email.data.EmailData;
+//import iweb2.ch5.usecase.email.data.EmailData;
 import iweb2.ch5.usecase.email.data.EmailDataset;
 import iweb2.util.config.IWeb2Config;
 
@@ -20,7 +20,7 @@ public class EmailData {
 
     
     /*
-     * List of html files that we will treat as emails.
+     * List of html files that we will treat as email.
      */
     public static String[][] TRAINING_DATA = new String[][] {
         {IWeb2Config.getHome()+"/data/ch02/biz-02.html", "A@sengerhost", "1@host"},

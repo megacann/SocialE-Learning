@@ -13,8 +13,6 @@ import ontology.core.AttributeValue;
 import java.util.HashMap;
 import java.util.Map;
 
-import nbc.NaiveBayes;
-
 public class ContentClassifier extends NaiveBayes {
     
     private EmailDataset emailDataset;

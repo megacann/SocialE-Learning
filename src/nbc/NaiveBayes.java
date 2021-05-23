@@ -1,15 +1,20 @@
 package nbc;
 
-import iweb2.ch5.classification.core.TrainingSet;
-import iweb2.ch5.classification.core.intf.Classifier;
-import iweb2.ch5.ontology.core.AttributeValue;
-import iweb2.ch5.ontology.intf.Attribute;
-import iweb2.ch5.ontology.intf.Concept;
-import iweb2.ch5.ontology.intf.Instance;
+//import iweb2.ch5.classification.core.TrainingSet;
+//import iweb2.ch5.classification.core.intf.Classifier;
+//import iweb2.ch5.ontology.core.AttributeValue;
+//import iweb2.ch5.ontology.intf.Attribute;
+//import iweb2.ch5.ontology.intf.Concept;
+//import iweb2.ch5.ontology.intf.Instance;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import ontology.Attribute;
+import ontology.Concept;
+import ontology.Instance;
+import ontology.core.AttributeValue;
 
 /**
  * A basic implementation of the Naive Bayes algorithm.
@@ -277,5 +282,11 @@ public class NaiveBayes implements Classifier {
 	 */
 	public TrainingSet getTset() {
 		return tSet;
+	}
+
+	@Override
+	public iweb2.ch5.ontology.intf.Concept classify(iweb2.ch5.ontology.intf.Instance instance) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }

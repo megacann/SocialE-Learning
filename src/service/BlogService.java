@@ -27,5 +27,6 @@ public interface BlogService {
 	public String addCategory(String name);
 	public Map<Integer, String> titleListGrup(String gID);
 	public Map<Integer, String> titleListType(String gID, String type);
+	public void train(String blogID);
 	
 }

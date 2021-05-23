@@ -595,5 +595,11 @@ public class BlogServiceImpl implements BlogService{
 		return userListAndID;
 	}
 
+	@Override
+	public void train(String blogID) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

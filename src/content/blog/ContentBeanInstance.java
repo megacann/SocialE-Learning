@@ -15,7 +15,6 @@ import ontology.core.StringAttribute;
 
 public class ContentBeanInstance extends BaseInstance{
 	private static int DEFAULT_TOP_N_TERMS = 10;
-    
     private int id;
     
     public ContentBeanInstance(String contentCategory, ContentBean contentBean) {
